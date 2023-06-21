@@ -1,48 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main () {
+int main()
+{
+  int counter,marks,avg,total=0;
+  for (counter=1;counter<=10;counter++)
+   {
 
-    int num1, num2, ans;
-    int operator;
-
-    printf("Enter first number: ");
-    scanf("%d", &num1);
-
-    printf("Enter second number: ");
-    scanf("%d", &num2);
-
-    printf("Addition -1\n");
-    printf("Subtraction -2\n");
-    printf("Multiple -3\n");
-    printf("Division - 4\n");
-    printf("\t Choose any operation for calculate as number:- ");
-    scanf("%d", &operator);
-
-    switch (operator)
-    {
-    case 1:
-        ans = num1 + num2;
-        printf("Addition = %d", ans);
-        break;
-
-    case 2:
-        ans = num1 - num2;
-        printf("Subtraction = %d", ans);
-        break;
-
-    case 3:
-        ans = num1 * num2;
-        printf("Multiplication = %d", ans);
-        break;
-
-    case 4:
-        ans = num1 / num2;
-        printf("Division = %d", ans);
-
-    default:
-        break;
-    }
-
+    printf("Enter %d marks",counter);
+  scanf("%d",&marks);
+    total+=marks;
+  }
+  avg= total/10;
+   printf("%d\n %d",avg,total);
+  if (avg<=50)
+  printf("You are Pass");
+  else
+    printf("You are Fail");
     return 0;
 }
